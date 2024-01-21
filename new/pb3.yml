@@ -1,0 +1,28 @@
+---
+- name: Update group1 servers
+  hosts: g1
+
+  tasks:
+  - name: Ensure directory is created 
+    ansible.builtin.file:
+      path: /home/ubuntu/group1
+      state: directory
+
+  - name: Ensure directory is created
+    ansible.builtin.file:
+      path: /home/ubuntu/group11
+      state: directory
+
+- name: Update group2 servers
+  hosts: g2
+
+  tasks:
+  - name: Ensure directory is created
+    ansible.builtin.file:
+      path: /home/ubuntu/group2
+      state: directory
+
+  - name: Ensure directory is created
+    ansible.builtin.file:
+      path: /home/ubuntu/group22
+      state: directory    
