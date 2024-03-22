@@ -1,9 +1,0 @@
----
-- name: Update group1 servers
-  hosts: g1
-
-  tasks:
-  - name: Ensure directory is created 
-    ansible.builtin.file:
-      path: /home/ubuntu/group1
-      state: directory
