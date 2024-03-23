@@ -1,6 +1,7 @@
 # Condition in Ansible 
 - name: condition 
   hosts: localhost
+  become: yes
   tasks:
     - name: check if roboshop user exists
       ansible.builtin.command: id roboshop 
