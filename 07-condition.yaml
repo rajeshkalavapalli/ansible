@@ -14,4 +14,9 @@
     - name: print exit status  
       ansible.builtin.debug:
         msg: "status is: {{ User.rc }}"
-        
+
+    - name: create user  
+      ansible.builtin.user:
+        name: user
+      when: user.rc != 0  
+
