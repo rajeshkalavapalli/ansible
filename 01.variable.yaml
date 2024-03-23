@@ -1,0 +1,11 @@
+# using variables in the ansible 
+- name: variables from play level 
+  hostes: "localhost" 
+  vars: 
+    Course: "Devops"
+    Training: "join-devops"
+    Trainer: "Sivakumar" 
+  tasks:
+  - name: check variable 
+    ansible.builtin.debug:
+      msg: "hi iam learnig {{ Course }} from {{ Training }} trainer is {{ Trainer  }}" 
