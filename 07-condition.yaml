@@ -1,0 +1,11 @@
+#condiion in ansible 
+- name: condition 
+  hosts: localhost
+  tasks:
+    - name: check roboshop user exist or not 
+      ansible.builtin.command: id roboshop 
+      register: User 
+
+    - name: print variable value 
+      ansibile.builtin.debug:
+       msg: "user out put is  : {{ User }}" 
