@@ -1,4 +1,4 @@
-#condiion in ansible 
+ #condiion in ansible 
 - name: condition 
   hosts: localhost
   tasks:
