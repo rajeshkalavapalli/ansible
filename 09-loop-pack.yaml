@@ -1,0 +1,12 @@
+# loops in second  ansible 
+- name: loops 
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: install 
+      ansible.builtin.package:
+        name: "{{ item }}"
+      loop:
+      - { name: 'git ' state: 'present'}
+      - { name: 'mysql ' state: 'absent'}
+      - { name: 'java' state: 'absent'}
