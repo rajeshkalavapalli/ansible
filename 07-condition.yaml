@@ -8,4 +8,4 @@
 
     - name: print variable value 
       ansibile.builtin.debug:
-       msg: "user out put is  : {{ User }}" 
+        msg: "user output is: {{ User }}" 
