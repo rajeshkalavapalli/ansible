@@ -1,0 +1,6 @@
+- name: var from arguments 
+  hosts: localhost 
+  tasks:
+    -name: ckeck variables from arug 
+    ansible.builtin.debug:
+     msg: "hello {{ person }}" , good {{ wishes }}
