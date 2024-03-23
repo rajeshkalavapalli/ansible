@@ -1,6 +1,6 @@
 - name: vaiables from play level  
   hosts: localhost 
   tasks:
-    - name: check variables from arug 
+    - name: check variables 
     ansible.builtin.debug:
-     msg: "hello{{ person }} , good{{ wishes }} "
+      msg: "hello{{ person }} , good{{ wishes }} "
