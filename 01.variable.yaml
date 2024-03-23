@@ -1,6 +1,6 @@
 # using variables in the ansible 
 - name: variables from play level 
-  hostes: "localhost" 
+  hosts: "localhost" 
   vars: 
     Course: "Devops"
     Training: "join-devops"
