@@ -1,4 +1,4 @@
-- name: var from arguments 
+- name: vaiables from play level  
   hosts: localhost 
   tasks:
     -name: ckeck variables from arug 
