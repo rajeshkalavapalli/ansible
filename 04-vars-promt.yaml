@@ -1,7 +1,7 @@
 # from user
 
-- name: var from from prompt 
-  hosts: locathost
+- name: var from prompt 
+  hosts: localhost
   vars_Prompt:
   - name: USERNAME
     prompt: "please enter your username"
@@ -12,3 +12,4 @@
   tasks: 
   - name: print and check the values 
     ansible.builtin.debug:
+      msg: "username is : {{username}}, password is : {{PASSWORD}}"
