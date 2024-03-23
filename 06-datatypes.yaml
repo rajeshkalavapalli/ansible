@@ -1,0 +1,33 @@
+# checking data types in ansible 
+
+- name: checking data types 
+  hosts: localhost 
+  vars:
+    NAME: Rajesh 
+    SKILLS:
+    - devops 
+    - ansible 
+    - terraform 
+    - shell
+    - python 
+    EXPERIENCE:
+      devops: 3
+      docker: 3
+      kubernetes: 3
+    CODING: true
+  tasks:
+    - name: print key value pair 
+      ansible.builtin.debug:
+        msg: "name: {{ NAME }}"
+      
+    - name: print list  
+      ansible.builtin.debug:
+        msg: "skills: {{ SKILLS }}"
+  
+    - name: print map  
+      ansible.builtin.debug:
+        msg: "experience : {{ EXPERIENCE }}"
+  
+    - name: print boolen   
+      ansible.builtin.debug:
+        msg: "is he coder  : {{ CODING }}"
