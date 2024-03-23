@@ -1,7 +1,6 @@
 # loops in ansible 
 - name: loops 
   hosts: localhost
-  become: yes
   tasks:
     - name: install 
       ansible.builtin.package:
