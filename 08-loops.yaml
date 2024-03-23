@@ -4,7 +4,7 @@
   tasks:
     - name: install 
       ansible.builtin.package:
-        msg: "{{ item }}"
+        name: "{{ item }}"
       loop:
       - git  
       - mysql 
