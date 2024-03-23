@@ -1,0 +1,14 @@
+# from user
+
+- name: var from from prompt 
+  hosts: locathost
+  vars_Prompt:
+  - name: USERNAME
+    prompt: "please enter your username"
+    private : false # they can see what they are entering 
+  - name: password
+    prompt: "please enter your password"
+    private : true #they can't  see what they are entering 
+  tasks: 
+  - name: print and check the values 
+    ansible.builtin.debug:
