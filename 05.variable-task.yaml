@@ -1,10 +1,8 @@
 ---
 - name: play from variable
   hosts: localhost 
-  vars:
-    course: "Devops"
-    trainer: "Rajesh" 
-    duration: "600hrs" 
+  var_files:
+    variables.yaml
   tasks:
     - name: check variables 
       vars:
