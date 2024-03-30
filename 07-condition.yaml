@@ -4,7 +4,7 @@
   - name: check robo shop user exist or not 
     ansible.builtin.command: id roboshop
     register: user
-    ignore_error: true 
+    ignore_errors: true 
 
   - name: print and check robosho 
     ansible.builtin.debug:
