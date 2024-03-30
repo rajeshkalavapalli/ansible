@@ -1,0 +1,7 @@
+- name: play from variable
+  hosts: localhost 
+  tasks:
+    - name: play from play1
+      ansible.builtin.debug:
+        msg: "welcome to devops learning from trainer rajesh duration 600hrs"
+    
