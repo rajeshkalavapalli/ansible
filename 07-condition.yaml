@@ -9,3 +9,7 @@
   - name: print and check robosho 
     ansible.builtin.debug:
       msg: "user output is : {{user}}"
+
+  - name: print and check robosho 
+    ansible.builtin.debug:
+      msg: "status is  : {{user.rc}}"
