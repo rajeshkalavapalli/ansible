@@ -1,0 +1,18 @@
+---
+- name: variables from prompt
+  hosts: localhost 
+  vars_prompt:
+    - name: username
+      prompt: "please enter your username"
+      private: false
+    - name: password 
+      prompt: "please enter your password" 
+      private: true
+  tasks:  # This line should be aligned with vars_prompt
+    - name: "print and check the values"
+      ansible.builtin.debug:
+        msg: "your username is {{ username }} and password is {{ password }}"  # Added spaces for better formatting
+
+
+    
+

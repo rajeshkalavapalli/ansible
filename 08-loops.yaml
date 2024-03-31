@@ -1,0 +1,12 @@
+- name: condition 
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: check robo shop user exist or not
+    ansible.builtin.debug:
+      msg: "hello {{item}}"
+    loop: 
+      - Rajesh 
+      - lavi
+      - prasanna 
+      - sanvi 

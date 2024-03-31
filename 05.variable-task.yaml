@@ -1,0 +1,12 @@
+---
+- name: play from variable
+  hosts: localhost 
+  vars_files:
+    - variables.yaml
+  tasks:
+    - name: check variables 
+      vars:
+        course: "Devops with AWS"  # Overriding the 'course' variable
+        duration: "500hrs"
+      ansible.builtin.debug:
+        msg: "Welcome to {{ course }}. Learning from {{ trainer }}. Time is {{ duration }}."  # Using the overridden 'course' variable
